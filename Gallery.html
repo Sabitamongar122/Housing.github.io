@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background: black;
+      height: 115px;
+      width: 100%;
+      display: flex;
+    }
+
+    nav h1 {
+      color: white;
+      padding: 20px;
+      font-weight: 100;
+      font-family: serif;
+      position: relative;
+      left: 32%;
+    }
+
+    .banner {
+      background: url(https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .navbar {
+      width: 100%;
+      margin: auto;
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      width: 93px;
+      height: 83px;
+      cursor: pointer;
+      border-radius: 20px;
+      margin-top: 15px;
+      margin-left: 10px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    .navbar ul li {
+      margin: 0 20px;
+      position: relative;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: whitesmoke;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-weight: 100;
+    }
+
+    .navbar ul li::after {
+      content: '';
+      height: 3px;
+      width: 0%;
+      background: white;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transition: 0.3s;
+    }
+
+    .navbar ul li:hover::after {
+      width: 100%;
+    }
+
+    .content {
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      top: 80%;
+      color: #fff;
+    }
+
+    .content h1 {
+      font-size: 45px;
+      margin-top: 1px;
+      font-family: cursive;
+      color: black;
+    }
+
+    .content p {
+      margin: 20px auto;
+      font-weight: 100;
+      line-height: 25px;
+      font-size: 20px;
+      font-family: cursive;
+      color: gold;
+    }
+
+    .footer {
+      background: black;
+      margin-top: 10px;
+      height: 165px;
+      width: 100%;
+    }
+
+    .footer ul {
+      list-style: none;
+      color: white
+
+    }
+
+    .media a{
+      color: white;
+      margin-right:30px;
+      font-size: 30px;
+    }
+
+    .media a:hover{
+      transition: 0.3s ease;
+      color: blue;
+    }
+
+    .time {
+      color: white;
+    }
+
+    .date {
+      color: white;
+    }
+
+    #time {
+      color: white;
+    }
+    #date {
+      color: white;
+    }
+
+    .time_date {
+      padding-top: 10px;
+      position: relative;
+      left: 75%;
+    }
+
+    .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }  
+
+  .gallery img {
+    height: 199px;
+    width: 234px;
+    margin: 5px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+    
+  }
+.gallery img:hover 
+{
+
+  transform:scale(1.4);
+}
+.footer-col{
+    position: absolute;
+      float:right;
+      padding-left: 70%;
+    }
+
+    .footer-con{
+     
+   float:left;
+     }
+
+      h3 {
+      color: white;
+      font-family: cursive;
+      font-size: 30px;
+    }
+
+  </style>
+
+  <script>
+    function updateDateTime() {
+      var currentDate = new Date();
+      var dateElement = document.getElementById("date");
+      var timeElement = document.getElementById("time");
+
+      // Format the date
+      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      var formattedDate = currentDate.toLocaleDateString(undefined, options);
+
+      // Format the time
+      var formattedTime = currentDate.toLocaleTimeString();
+
+      // Update the HTML elements
+      dateElement.innerHTML = formattedDate;
+      timeElement.innerHTML = formattedTime;
+    }
+
+    // Update the date and time every second
+    setInterval(updateDateTime, 1000);
+  </script>
+</head>
+
+<body>
+  <nav>
+    <img class="logo" src="logo.jpg">
+
+    <div class="time_date">
+      <p class="date">Date: <span id="date"></span></p>
+      <p class="time">Time: <span id="time"></span></p>
+    </div>
+  </nav>
+
+ 
+  <div class="banner">
+    <div class="navbar">
+      
+      <ul>
+        <li><a href="C:\Users\sabit\Desktop\Housing\Homepage.html">Home Page</a></li>
+        <li><a href="C:\Users\sabit\Desktop\Housing\About Us.html">About Us</a></li>
+        <li><a href="C:\Users\sabit\Desktop\Housing\History.html">History</a></li>
+        <li><a href="C:\Users\sabit\Desktop\Housing\Contact Us.html">Contact Us</a></li>
+      </ul>  
+    </div><br><br>
+
+
+    <main>
+    <div class="gallery">
+      <a href="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/191263789.jpg?k=67e86f60cfb2a579b3bfdb41fb2b61c4bc018f6520ba3ac2f3c121c1ce09c47b&o=">
+      <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/191263789.jpg?k=67e86f60cfb2a579b3bfdb41fb2b61c4bc018f6520ba3ac2f3c121c1ce09c47b&o=">
+
+      <a href="https://media-cdn.tripadvisor.com/media/vr-splice-j/07/6f/a9/36.jpg">
+      <img src="https://media-cdn.tripadvisor.com/media/vr-splice-j/07/6f/a9/36.jpg">
+
+      <a href="https://media-cdn.tripadvisor.com/media/vr-splice-j/06/31/4b/fd.jpg">
+      <img src="https://media-cdn.tripadvisor.com/media/vr-splice-j/06/31/4b/fd.jpg">
+
+      <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/390900590.jpg?k=e902d1fb346ee8b4484b990f0a002b28742d5e7e41f2bbc2731e5534a0f1dae1&o=&hp=1">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/390900590.jpg?k=e902d1fb346ee8b4484b990f0a002b28742d5e7e41f2bbc2731e5534a0f1dae1&o=&hp=1">
+
+      <a href="https://www.serviceapartmentsdelhi.com/wp-content/uploads/2021/05/Washroom-1030x644.jpg">
+      <img src="https://www.serviceapartmentsdelhi.com/wp-content/uploads/2021/05/Washroom-1030x644.jpg">
+
+
+      <a href="https://www.realtorbhutan.net/wp-content/uploads/2023/04/IMG_2730-680x510.jpeg">
+      <img src="https://www.realtorbhutan.net/wp-content/uploads/2023/04/IMG_2730-680x510.jpeg">
+
+      <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/390900584.jpg?k=82805b4612a069a2f1e089c2d6a6564bd19abde25886b1bb02dc01446887336b&o=&hp=1">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/390900584.jpg?k=82805b4612a069a2f1e089c2d6a6564bd19abde25886b1bb02dc01446887336b&o=&hp=1">
+
+      <a href="https://a0.muscache.com/im/pictures/bd7cbcb9-4532-41e9-aeb0-4b11ba4215eb.jpg?im_w=720">
+      <img src="https://a0.muscache.com/im/pictures/bd7cbcb9-4532-41e9-aeb0-4b11ba4215eb.jpg?im_w=720">
+
+      <a href="https://q-xx.bstatic.com/xdata/images/hotel/max500/187109115.jpg?k=45e12201adb30b3b1909791f5ccfa6d43ddcb95b6b58950740209a5263f06b1d&o=">
+      <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/187109115.jpg?k=45e12201adb30b3b1909791f5ccfa6d43ddcb95b6b58950740209a5263f06b1d&o=">
+
+      <a href="https://api.oliveservicedapartments.com/property_assets/property_images/53/layouts/1150/1616741874-download%20(14).png">
+      <img src="https://api.oliveservicedapartments.com/property_assets/property_images/53/layouts/1150/1616741874-download%20(14).png">
+
+
+      <a href="https://www.realtorbhutan.net/wp-content/uploads/2018/09/IMG_1460-680x510.jpeg">
+      <img src="https://www.realtorbhutan.net/wp-content/uploads/2018/09/IMG_1460-680x510.jpeg">
+
+      <a href="https://media-cdn.tripadvisor.com/media/vr-splice-j/0d/83/f2/9d.jpg">
+      <img src="https://media-cdn.tripadvisor.com/media/vr-splice-j/0d/83/f2/9d.jpg">
+
+      <a href="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/167126019.jpg?k=24222df08dee4c6aef7445b878948de64f58f66d1b312e3c6f882cf1f5754461&o=">
+      <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/167126019.jpg?k=24222df08dee4c6aef7445b878948de64f58f66d1b312e3c6f882cf1f5754461&o=">
+
+      <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/409529302.jpg?k=5baca91e40ac02a422650a8c651c07737a257658498e7c0251c66031d6be3c2a&o=&hp=1">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/409529302.jpg?k=5baca91e40ac02a422650a8c651c07737a257658498e7c0251c66031d6be3c2a&o=&hp=1">
+
+      <a href="https://www.oliveapartmentsgurgaon.com/wp-content/uploads/2021/05/WhatsApp-Image-2020-09-10-at-12.05.15-PM-3-495x400.jpg">
+      <img src="https://www.oliveapartmentsgurgaon.com/wp-content/uploads/2021/05/WhatsApp-Image-2020-09-10-at-12.05.15-PM-3-495x400.jpg"></a>
+</div>
+  </main><br><br>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="footer-con">
+                    <h3 style="position: relative; left: 45px; color: white;">Contact Us</h3>
+        <p style="color: white; text-align: center;">+975_17455878<br>
+            0987-98778<br>
+            <b><i>nationalbhutanhousing123@gmail.com</i></b></p>
+        </div>
+
+        <div class="footer-col">
+          <h3 style="position: relative; left: 100px">follow us</h3>
+          <div style="position: relative; left: 60px" class="media">
+          
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+              <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                  <a href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>  
+      
+    </div>
+
+    
+  </footer>
+
+</body>
+</html>

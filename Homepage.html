@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-position: fixed;
+      margin: 0;
+    }
+    nav {
+      background: black;
+      height: 115px;
+      width: 100%;
+      display: flex;
+    }
+    nav h1 {
+      color: white;
+      padding: 20px;
+      font-weight: 100;
+      font-family: serif;
+      position: relative;
+      left: 32%;
+    }
+    .banner {
+      width: 100%;
+      height: 100vh;
+      background: url(https://images.pexels.com/photos/4221670/pexels-photo-4221670.jpeg?cs=srgb&dl=pexels-setu-chhaya-4221670.jpg&fm=jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    .navbar {
+      width: 100%;
+      margin: auto;
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      width: 93px;
+      height: 83px;
+      cursor: pointer;
+      border-radius: 20px;
+      margin-top: 15px;
+      margin-left: 10px;
+    }
+    .navbar ul li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 20px;
+      position: relative;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-weight: 100;
+    }
+    .navbar ul li::after {
+      content: '';
+      height: 3px;
+      width: 0%;
+      background: white;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transition: 0.3s;
+    }
+    .navbar ul li:hover::after {
+      width: 100%;
+    }
+    .content {
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      top: 80%;
+      color: #fff;
+    }
+    .content h1 {
+      font-size: 45px;
+      margin-top: 1px;
+      font-family: cursive;
+      color: white;
+    }
+    .content p {
+      margin: 20px auto;
+      font-weight: 100;
+      line-height: 25px;
+      font-size: 20px;
+      font-family: cursive;
+      color: white;
+    }
+    .time {
+      color: white;
+    }
+    .date {
+      color: white;
+    }
+    #time {
+      color: white;
+    }
+    #date {
+      color: white;
+    }
+    .time_date {
+      padding-top: 10px;
+      position: relative;
+      left: 75%;
+    }
+    .footer {
+      background: black;
+      margin-top: 0px;
+      height: 165px;
+      width: 100%;
+    }
+    
+    .footer ul {
+      list-style: none;
+      color: white;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .footer-col{
+      float:left;
+      margin: 20px 0;
+    }
+    .footer-con{
+     
+      float:right;
+     padding-right: 50%;
+    }
+    .footer h1 {
+      color: white;
+      font-family: cursive;
+      text-align: center;
+    }
+    .media a {
+      color: white;
+      margin-right: 30px;
+      font-size: 30px;
+      position: relative;
+      left: 11px;
+    }
+    .media a:hover {
+      transition: 0.3s ease;
+      color: blue;
+    }
+  </style>
+  <script>
+    function updateDateTime() {
+      var currentDate = new Date();
+      var dateElement = document.getElementById("date");
+      var timeElement = document.getElementById("time");
+
+      // Format the date
+      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      var formattedDate = currentDate.toLocaleDateString(undefined, options);
+
+      // Format the time
+      var formattedTime = currentDate.toLocaleTimeString();
+
+      // Update the HTML elements
+      dateElement.innerHTML = formattedDate;
+      timeElement.innerHTML = formattedTime;
+    }
+
+    // Update the date and time every second
+    setInterval(updateDateTime, 1000);
+  </script>
+</head>
+
+<body>
+  <nav>
+    <img class="logo" src="logo.jpg">
+    
+    <div class="time_date">
+      <p class="date">Date: <span id="date"></span></p>
+      <p class="time">Time: <span id="time"></span></p>
+    </div>
+  </nav>
+
+  <div class="banner">
+    <div class="navbar">
+      <ul>
+        <li><a href="C:\Users\sabit\Desktop\Housing\About Us.html">About Us</a></li>
+        <li><a href="C:\Users\sabit\Desktop\Housing\History.html">History</a></li>
+        <li><a href="C:\Users\sabit\Desktop\Housing\Gallery.html">Gallery</a></li>
+        <li><a href="C:\Users\sabit\Desktop\Housing\Contact Us.html">Contact Us</a></li>
+      </ul> 
+    </div>
+
+    <div class="content">
+      <h1>BHUTAN NATIONAL HOUSING</h1>
+      <p>We here provide our services to people by managing our living
+         standard. Our priority is the people living in this country whether they
+         are from outside or from different religion.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-con">
+          <h1>Contact Us</h1>
+          <p style="color: white; text-align: center;">
+            +975_17455878<br>
+            0987-98778<br>
+            <b><i>nationalbhutanhousing123@gmail.com</i></b>
+          </p>
+        </div>
+        <div class="footer-col">
+           <h1 style="position: relative; left: 60px">Follow Us</h1>
+          <div style="position: relative; left: 60px" class="media">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

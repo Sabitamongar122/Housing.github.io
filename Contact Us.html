@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title></title>
+  <script type="text/javascript">
+  function redirect(){
+    window.location ="Homepage.html"
+  }
+  document.write("You will be redirected to the HOME PAGE");
+  setTimeout('redirect()',5000);
+</script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: serif;
+    }
+
+    nav {
+      background: black;
+      height: 115px;
+      width: 100%;
+      display: flex;
+   float: left;
+    }
+
+    nav h1 {
+      color: white;
+      padding: 20px;
+      font-weight: 100;
+      font-family: serif;
+    }
+
+    .navbar {
+      width: 100%;
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      width: 93px;
+      height: 83px;
+      cursor: pointer;
+      border-radius: 20px;
+      margin-top: 15px;
+      margin-left: 10px;
+
+    }
+
+   .navbar ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    .navbar ul li {
+      margin: 0 20px;
+      position: relative;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: whitesmoke;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-weight: 100;
+    }
+
+    .navbar ul li::after {
+      content: '';
+      height: 3px;
+      width: 0%;
+      background: white;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transition: 0.3s;
+    }
+
+    .navbar ul li:hover::after {
+      width: 100%;
+    }
+
+    .content {
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .content h1 {
+      font-size: 45px;
+      margin-top: 1px;
+      font-family: cursive;
+      color: black;
+    }
+
+    .content p {
+      margin: 20px auto;
+      font-weight: 100;
+      line-height: 25px;
+      font-size: 20px;
+      font-family: cursive;
+      color: green;
+    }
+
+    .footer {
+      background: black;
+      margin-top: 0px;
+      height: 175px;
+      width: 100%;
+    }
+
+    .containerfooter {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .footer-coll {
+      width: 25%;
+      padding: 0 15px;
+    }
+
+    .footer h2 {
+      color: white;
+      font-family: cursive;
+    }
+
+    .footer h1 {
+      color: white;
+      font-family: serif;
+    }
+
+    .media a {
+      color: white;
+      margin-right: 30px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .media a:hover {
+      transition: 0.3s ease;
+      color: blue;
+    }
+
+    .container {
+      max-width: 46%;
+      padding: 5%;
+      background-image: linear-gradient;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      justify-content: left;
+      margin-left: 60%;
+    }
+
+    .search-bar {
+      width: 95%;
+      max-width: 100%;
+      background: white;
+      display: flex;
+      align-items: left;
+      border-radius: 60px;
+      padding: 10px 20px;
+      backdrop-filter: blur(4px) saturate(180%);
+      border: 1px solid white;
+      bottom: 4rem;
+    }
+
+    .search-bar input {
+      background: transparent;
+      flex: 1;
+      border: 0;
+      outline: none;
+      padding: 10px 20px;
+      font-size: 20px;
+      color: black;
+    }
+
+    ::placeholder {
+      color: #0f0f0f;
+    }
+
+    .search-bar button img {
+      width: 35px;
+      height: 35px;
+      border-radius: 20px;
+    }
+
+    .search-bar button {
+      border: 0;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      background: white;
+      cursor: pointer;
+    }
+
+    .text {
+      background: transparent;
+      color: whitesmoke;
+      border: 1px double white;
+      max-width: 700px;
+      height: 400px;
+      padding-left: 30px;
+      padding-bottom: 10px;
+      padding-top: 20px;
+      margin-left: 25%;
+    }
+
+    .text00 {
+      background: transparent;
+      color: white;
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    .box {
+      background: transparent;
+      border-bottom: 3px solid black;
+      padding-top: 15px;
+      color: white;
+    }
+
+    .box1 {
+      background: transparent;
+      font-size: 19px;
+    }
+
+    .btn-box {
+      display: flex;
+      justify-content: space-between;
+      width: 34.5rem;
+      height: 3rem;
+      position: relative;
+      left: 6rem;
+    }
+
+    .btn-box .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 5.5rem;
+      height: 100%;
+      background: black;
+      border: .1rem solid white;
+      border-radius: .8rem;
+      font-size: 19.5px;
+      color: white;
+      z-index: 1;
+      overflow: hidden;
+      transition: .5s;
+    }
+
+    .btn-box .btn:hover {
+      color: green;
+      background: white;
+    }
+
+    .btn-box .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: black;
+      z-index: -1;
+      transition: .5s;
+    }
+
+    .time {
+      color: white;
+    }
+    .date {
+      color: white;
+    }
+    #time {
+      color: white;
+    }
+    #date {
+      color: white;
+    }
+    .time_date {
+      padding-top: 10px;
+      position: relative;
+      left: 75%;
+    }
+
+    .btn-box .btn:hover::before {
+      width: 100%;
+    }
+
+    .gmap_iframe {
+      border: 2px solid green;
+      width: 300px;
+      height: 300px;
+      border-radius: 20px;
+      position: relative;
+      bottom: 23rem;
+      left: 42rem;
+    }
+    .footer-con{
+    position: absolute;
+      float:right;
+     }
+
+.footer-col{
+    position: absolute;
+      float:left;
+      padding-left: 70%;  
+    }
+
+     h2 {
+      color: black;
+      font-family: cursive;
+      font-size: 35px;
+    }
+
+  </style>
+
+  <script>
+    function updateDateTime() {
+      var currentDate = new Date();
+      var dateElement = document.getElementById("date");
+      var timeElement = document.getElementById("time");
+
+      // Format the date
+      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      var formattedDate = currentDate.toLocaleDateString(undefined, options);
+
+      // Format the time
+      var formattedTime = currentDate.toLocaleTimeString();
+
+      // Update the HTML elements
+      dateElement.innerHTML = formattedDate;
+      timeElement.innerHTML = formattedTime;
+    }
+
+    // Update the date and time every second
+    setInterval(updateDateTime, 1000);
+  </script>
+</head>
+
+  <body style="background: url(https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80); background-size: cover; background-position: center;">
+  <nav>
+    <img class="logo" src="logo.jpg">
+
+    <div class="time_date">
+      <p class="date">Date: <span id="date"></span></p>
+      <p class="time">Time: <span id="time"></span></p>
+    </div>
+  </nav>
+
+  <br><br>
+    <div class="navbar">
+
+      <ul>
+        <li><a href="C:\Users\sabit\Desktop\Housing\Homepage.html">Home Page</a></li>
+        <li><a href="C:\Users\sabit\Desktop\Housing\About Us.html">About Us</a></li>
+        <li><a href="C:\Users\sabit\Desktop\Housing\History.html">History</a></li>
+        <li><a href="C:\Users\sabit\Desktop\Housing\Gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <form action="https://www.google.com/search" method="get" class="search-bar">
+        <input type="text" placeholder="&#xf002 search" name="q">
+        <button type="submit"><img src="https://w7.pngwing.com/pngs/125/792/png-transparent-computer-icons-android-web-search-engine-google-search-search-box-google-search-bar-blue-trademark-logo-thumbnail.png" height="30px" width="30px"></button>
+      </form>
+    </div>
+
+    <h1 class="text00">Contact Us</h1>
+
+    <div class="text">
+      <form id="myform" action="https://docs.google.com/document/d/1QR3Jsc_SAoC1HJOumeURDNWD0Mq3cic_fKZGrkrv-oQ/edit?usp=sharing" method="Gets">
+        <br><br><br><label class="box1" for="Firstname">First Name:</label>
+        <input class="box" type="text" id="name" name="name" placeholder="Your Name.." required>
+        <br>
+        <br>
+
+        <label class="box1" for="Lastname">Last Name:</label>
+        <input class="box" type="text" id="name" name="name" placeholder="Your Name.." required>
+        <br>
+        <br>
+
+        <label class="box1" for="name">Phone number:</label>
+        <input class="box" type="number" id="name" name="name" placeholder="Your Phone number.." required>
+        <br>
+        <br>
+
+        <label class="box1" for="email">Email:</label>
+        <input class="box" type="email" id="name" name="name" placeholder="Your Email.." required>
+        <br>
+        <br><br>
+        <div class="btn-box">
+          <input class="btn" type="Submit" value="Submit" onclick="Submitform()">
+        </div>
+    </div>
+    </form>
+
+    <iframe class="gmap_iframe" width="300px" height="300px" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Sherubtse college&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+  </div>
+
+  <footer class="footer">
+    <div class="containerfooter">
+      <div class="row">
+
+        <div class="footer-con">
+          <h2 style="position: relative; left: 45px">Contact Us</h2>
+          <p style="color: white; text-align: center;">+975_17455878<br>
+            0987-98778<br>
+            <b><i>nationalbhutanhousing123@gmail.com</i></b></p>
+        </div>
+
+        <div class="footer-col">
+          <h2 style="position: relative; left: 35px">follow us</h2>
+          <div class="media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
